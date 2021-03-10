@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Scene.cs" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 150, 150 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 100, 100 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25, 25 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 20, 20 )
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 1 )
+Bounds = PoolVector2Array( 0, 0, 1600, 0, 1600, 900, 0, 900 )
+AgentSize = 32.0
+VisiblePolygons = true
+AmountOfAgents = 100
+AgentDrawPath = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 353.244, 256.209 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1167.96, 178.524 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 745.949, 220.378 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 768.775, 752.09 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 573.052, 277.795 )
+polygon = PoolVector2Array( 597, 451, 688.626, 345.457, 894.933, 456.492, 659, 571 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 100.718, 223.807 )
+polygon = PoolVector2Array( 90.452, 499.255, 257.941, 400.365, 477.993, 437.783, 234.778, 489.455, 349.703, 525.091, 259.723, 566.073 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 627.736, -0.0166016 )
+polygon = PoolVector2Array( 14.963, 447.842, 159.417, 462.128, 253.162, 140.26, 286.409, 430.38, 234.778, 489.455, 434.037, 395.457, 651.511, 481.177, 519.756, 563.722, 488.008, 482.764, 152.775, 523.826, 398.497, 613.724, 245.136, 658.966, 194.339, 579.596, 22.9, 638.33, 102.27, 539.911 )
